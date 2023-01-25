@@ -43,7 +43,7 @@ const server = http.createServer((req, res) => {
             break;
         }
 
-        // delete all tasks which have isCompleted true
+        // delete all tasks which have isComplete true
         case 'DELETE': {
             data.forEach((ele, index) => {
                 if (ele['isComplete'] === true)
@@ -54,7 +54,6 @@ const server = http.createServer((req, res) => {
             break;
         }
 
-
         default:
             break;
         }
@@ -62,25 +61,24 @@ const server = http.createServer((req, res) => {
 
     else if (req.url.match('/todos/') != null) {
 
+        if (req.method.toUpperCase() == 'POST') {
+            res.writeHead(405, { 'Content-Type': 'text/html' });
+            res.end('You cannot post in this endpoint. Use /todos for POST request');
+            return;
+        }
+
         let idRequested = Number(req.url.substring(7));
 
         // 422 Unprocessable Entity
-        let idFoundFlag = false, idFound = 0;
-        data.forEach((ele,index)=>{
-            if(ele['id'] == idRequested)
-                idFoundFlag = true,idFound = index;
+        let idFound = -1;
+        data.forEach((ele, index) => {
+            if (ele['id'] == idRequested) 
+                idFound = index;
         });
 
-        if (idFoundFlag == false) {
-
-            if (req.method.toUpperCase() == 'POST') {
-                res.writeHead(422, { 'Content-Type': 'text/html' });
-                res.end('You cannot post in this endpoint. Use /todos for POST request');
-            }
-            else {
-                res.writeHead(422, { 'Content-Type': 'text/html' });
-                res.end('The id send as parameter is inavalid or does not exist.');
-            }
+        if (idFound != -1) {
+            res.writeHead(422, { 'Content-Type': 'text/html' });
+            res.end('The id send as parameter is inavalid or does not exist.');
 
         }
         else
@@ -92,14 +90,8 @@ const server = http.createServer((req, res) => {
                 break;
             }
 
-            case 'POST': {
-                res.writeHead(403, { 'Content-Type': 'text/html' });
-                res.end('You cannot post in this endpoint. Use /todos for POST request');
-                break;
-            }
-
             case 'DELETE': {
-                delete data.splice(idFound,1);
+                delete data.splice(idFound, 1);
                 res.writeHead(200, { 'Content-Type': 'text/html' });
                 res.end('The data corresponding to id has been deleted successfully.');
                 break;
@@ -107,13 +99,11 @@ const server = http.createServer((req, res) => {
 
             case 'PATCH': {
                 let dataSent = '';
-
                 req.on('data', (data) => {
                     dataSent += data;
                 });
 
                 req.on('end', () => {
-
                     dataSent = JSON.parse(dataSent);
                     for (let key in dataSent)
                         data[idFound][key] = dataSent[key];
@@ -122,7 +112,6 @@ const server = http.createServer((req, res) => {
                     res.end(JSON.stringify(data));
 
                 });
-
                 break;
             }
 
