@@ -1,4 +1,4 @@
-const { Task } = require('../database/models');
+const { Task } = require('../../database/models');
 
 const getTaskFromDB = async (id) => {
     const requiredEntry = await Task.findAll({

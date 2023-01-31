@@ -1,4 +1,4 @@
-const { Task } = require('../database/models');
+const { Task } = require('../../database/models');
 
 const getAllTasksFromDB = async () => {
     const data = await Task.findAll();
@@ -7,6 +7,8 @@ const getAllTasksFromDB = async () => {
 
 const postTaskInDB = async (dataObj) => {
 
+    if(dataObj.taskName == null)
+        return 'Please provide taskName for post request.';
     const newEntry = await Task.create({ ...dataObj, isComplete: false });
     return newEntry;
 };
