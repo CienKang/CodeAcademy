@@ -1,15 +1,17 @@
-const { getAllTasksFromDB, postTaskInDB, deleteCompleteTasksFromDB } = require('../services/todos.services');
+const todosService = require('../services/todos.services');
 
 const getTasks = async (req, res) => {
-    return res.status(200).send(await getAllTasksFromDB());
+
+    res.status(200);
+    res.send(await todosService.getAllTasksFromDB());
 };
 
 const postTasks = async (req, res) => {
-    res.status(201).send(await postTaskInDB(req.body));
+    res.status(201).send(await todosService.postTaskInDB(req.body));
 };
 
 const deleteCompleteTasks = async (req, res) => {
-    res.status(200).send(await deleteCompleteTasksFromDB());
+    res.status(200).send(await todosService.deleteCompleteTasksFromDB());
 };
 
 
