@@ -23,7 +23,7 @@ describe('todos.controller', () => {
             expect(res.send).toHaveBeenCalledWith(mockTasks);
             expect(res.status).toHaveBeenCalledWith(200);
         });
-        
+
     });
 
     describe('postTaskInDB', () => {
@@ -33,7 +33,7 @@ describe('todos.controller', () => {
                 isComplete: false
             };
             jest.spyOn(todosService, 'postTaskInDB').mockResolvedValue(mockTask);
-         
+
             const req = {
                 body: mockTask
             };

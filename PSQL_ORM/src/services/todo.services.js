@@ -1,7 +1,7 @@
-const { Task } = require('../../database/models');
+const db = require('../../database/models');
 
 const getTaskFromDB = async (id) => {
-    const requiredEntry = await Task.findAll({
+    const requiredEntry = await db.Task.findAll({
         where: {
             id: id
         }
@@ -10,7 +10,7 @@ const getTaskFromDB = async (id) => {
 };
 
 const deleteTaskFromDB = async (id) => {
-    const msg = await Task.destroy({
+    const msg = await db.Task.destroy({
         where: {
             id: id
         }
@@ -22,7 +22,7 @@ const deleteTaskFromDB = async (id) => {
 };
 
 const updateTaskFromDB = async (id, body) => {
-    const msg = await Task.update({ ...body }, {
+    const msg = await db.Task.update({ ...body }, {
         where: {
             id: id
         },
