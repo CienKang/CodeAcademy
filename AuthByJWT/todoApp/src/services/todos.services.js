@@ -1,8 +1,8 @@
 const { Tasks } = require('../../database/models');
+const usernameUtils= require('../utils/username');
 const getAllTasksFromDB = async () => {
 
     const data = await Tasks.findAll();
-    console.log(data);
     if (!data)
         throw new Error('getAllTasksFromDB service encountered an error');
 
@@ -12,7 +12,8 @@ const getAllTasksFromDB = async () => {
 const createTaskInDB = async (body) => {
     const data = await Tasks.create({ 
         title: body.title, 
-        isComplete: false 
+        isComplete: false ,
+        username: usernameUtils.USERNAME
     });
     
     // if(!data)
