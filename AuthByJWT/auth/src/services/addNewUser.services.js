@@ -11,8 +11,6 @@ const addNewUserInDB = async (username, password) => {
     );
 
     if(!newUser) throw new Error('User could not be created');
-    
-    newUser.dataValues.hashedPassword = 'xxxxxxxxxxxxxx';
 
     return newUser;
 

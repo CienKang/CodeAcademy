@@ -10,4 +10,14 @@ const bodyValidator = (schema) => {
     };
 };
 
-module.exports = { bodyValidator } ;
+
+const authHeaderValidator = (req, res, next) => {
+    const authHeader = req.headers.authorization;
+    if (authHeader) {
+        next();
+    } else {
+        res.status(401).json({ message: 'Token not found' });
+    }
+};
+
+module.exports = { bodyValidator ,authHeaderValidator } ;
