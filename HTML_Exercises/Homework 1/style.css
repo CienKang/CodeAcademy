@@ -14,7 +14,7 @@
 }
 
 .header h1 {
-    margin-bottom: 1vhrgb(33, 210, 198)
+    margin-bottom: 1vh;
 }
 
 .link-bar {
@@ -24,17 +24,20 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 3v;
+    gap: 3vw;
     padding-left: 1vw;
 }
 
 footer {
     height: 10vh;
-    background-color: #0f100f;
-    color: white;
+    background-color: rgb(215, 215, 215);
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .flex-main {
@@ -95,6 +98,25 @@ footer {
     }
     
     .image-container img {
+        height: 6vh;
+    }
+
+    footer{
+        height: 6vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .flex-main {
+        flex-direction: column;
+    }
+    .flex-1 {
+        width: 100%;
+    }
+    .flex-2 {
+        width: 100%;
+    }
+    footer{
         height: 6vh;
     }
 }
