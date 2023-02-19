@@ -1,7 +1,7 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'roboto', sans-serif;
+    font-family:  sans-serif;
 }
 
 header {
@@ -9,7 +9,7 @@ header {
     background-color: black;
     color: white;
     display: flex;
-    flex-direction: row;   
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
@@ -18,27 +18,28 @@ header {
 header .name-div {
     display: flex;
     flex-direction: column;
-    gap : 2px;
+    gap: 2px;
 }
 
-.name-div h1{
+.name-div h1 {
     font-size: 1.6rem;
     font-weight: lighter;
 }
-.name-div h2{
+
+.name-div h2 {
     font-size: 1.9rem;
     font-weight: lighter;
 }
 
-.link-bar-div{
+.link-bar-div {
     align-self: flex-end;
     display: flex;
-    gap:10vw;
+    gap: 10vw;
     margin-right: 15vw;
     margin-bottom: 5px;
 }
 
-.link-bar-div span{
+.link-bar-div span {
     font-size: 1.2rem;
     font-weight: lighter;
 }
@@ -53,7 +54,7 @@ footer {
     /* bottom: 0; */
 }
 
-footer p{
+footer p {
     margin-left: 10%;
     font-size: 1.5rem;
 }
@@ -62,38 +63,38 @@ main {
     margin-top: 2vh;
 }
 
-.outer-margin-left-15{
+.outer-margin-left-15 {
     margin-left: 15vw;
 }
 
-.cards{
+.cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 4.8vw;
-    row-gap:3vh;
+    row-gap: 3vh;
     margin-bottom: 6vh;
 }
 
-.card{
+.card {
     border: 2px rgba(128, 128, 128, 0.531) solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 20vw;
     flex-wrap: column wrap;
-    gap:1vh;
+    gap: 1vh;
 }
 
-.card img{
+.card img {
     height: 50%;
 }
 
-.padding-10{
+.padding-10 {
     padding: 0 10px 0 10px;
 }
 
-.date-time{
+.date-time {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -102,32 +103,32 @@ main {
     margin-bottom: 1vh;
 }
 
-.card h2{
+.card h2 {
     font-size: 2.2rem;
     /* font-weight: lighter; */
-    color: rgb(44,44,44);
-    font-weight:500;
+    color: rgb(44, 44, 44);
+    font-weight: 500;
 }
 
-.card p{
+.card p {
     font-size: 1.3rem;
     font-weight: lighter;
     color: rgb(94, 108, 122);
 }
 
-.break-line{
+.break-line {
     border: 1px rgba(128, 128, 128, 0.531) solid;
     width: 90%;
     align-self: center;
 }
 
-.card .comment-like{
+.card .comment-like {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.comments{
+.comments {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -136,18 +137,23 @@ main {
     margin-bottom: 1vh;
 }
 
-.comments span{
+.comments span {
     font-size: 1.8rem;
     font-weight: lighter;
     color: rgb(94, 108, 122);
 }
 
-.comments img{
-    height: 1.6vw;
-    width: 1.6vw;
+.comments img {
+    height: 36px;
+    width: 36px;
 }
 
-.comment-like img{
-    height: 1.6vw;
-    width: 1.6vw;
+.comment-like img {
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+}
+
+.comment-like img:hover{
+    transform: scale(1.2);
 }
