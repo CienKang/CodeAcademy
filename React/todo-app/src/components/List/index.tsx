@@ -1,4 +1,4 @@
-import  PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 interface PropTypes {
@@ -8,7 +8,7 @@ interface PropTypes {
 
 export const List = (props: PropTypes): JSX.Element => {
     const deleteHandler = (item: string): void => {
-        const data = props.tasks.filter((ele) => ele != item );
+        const data = props.tasks.filter((ele) => ele != item);
         props.setTasks(data);
     };
 

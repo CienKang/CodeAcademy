@@ -1,4 +1,4 @@
-import PropTypes  from 'prop-types';
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 interface PropTypes {
@@ -13,7 +13,7 @@ export const SearchBar = (props: PropTypes): JSX.Element => {
         setTaskName(e.target.value);
     };
     const handleAdd = (): void => {
-        if(taskName === '') 
+        if (taskName === '')
             return;
 
         props.setTasks([...props.tasks, taskName]);

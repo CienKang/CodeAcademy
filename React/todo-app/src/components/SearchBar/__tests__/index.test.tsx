@@ -5,6 +5,7 @@ import { SearchBar } from '../index';
 describe('SearchBar', () => {
 
     it('should render an input and a button when rendered for first time', () => {
+
         const setTasks = jest.fn();
         const { getByPlaceholderText, getByText } = render(<SearchBar tasks={[]} setTasks={setTasks} />);
         expect(getByPlaceholderText('Enter the task name')).toBeInTheDocument();
@@ -12,6 +13,7 @@ describe('SearchBar', () => {
     });
 
     it('should add a task to the list when clicked', () => {
+
         const setTasks = jest.fn();
         const { getByPlaceholderText, getByText } = render(<SearchBar tasks={[]} setTasks={setTasks} />);
         const input = getByPlaceholderText('Enter the task name');
@@ -22,6 +24,7 @@ describe('SearchBar', () => {
     });
 
     it('should not add a task to the list when clicked with empty input', () => {
+
         const setTasks = jest.fn();
         const { getByPlaceholderText, getByText } = render(<SearchBar tasks={[]} setTasks={setTasks} />);
         const input = getByPlaceholderText('Enter the task name');
