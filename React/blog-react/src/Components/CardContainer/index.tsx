@@ -6,7 +6,7 @@ import data from '../../assets/mockData/index.json';
 const CardContainer = (): JSX.Element => {
     return (
         <div className="flex flex-row flex-wrap gap-x-24 ml-32">
-            {data.map((card) => {
+            {data.map((card,idx) => {
                 return (
                     <Card
                         date={card.date}
@@ -16,6 +16,7 @@ const CardContainer = (): JSX.Element => {
                         claps={card.claps}
                         liked={card.liked}
                         image={card.image}
+                        id={idx}
                     />
                 );
             })}

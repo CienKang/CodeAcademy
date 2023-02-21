@@ -8,7 +8,8 @@ interface props {
     description: string
     claps: number
     liked: boolean
-    image: string
+    image: string,
+    id:number
 }
 
 const card = ({
@@ -19,6 +20,7 @@ const card = ({
     claps,
     liked,
     image,
+    id
 }: props): JSX.Element => {
 
     const [clap, setClap] = useState(claps);
@@ -38,7 +40,7 @@ const card = ({
         setLike(!like);
     };
     return (
-        <div className="max-w-xs flex flex-col border-solid border-2 my-3">
+        <div data-testid={`card`} className="max-w-xs flex flex-col border-solid border-2 my-3">
             <img className="w-full h-3/6" src={require(`../../assets/Images/${image}`)} alt=""></img>
             <div className="flex flex-row justify-between align-center">
                 <p className="pl-1 text-grey">{date}</p>
@@ -49,8 +51,8 @@ const card = ({
             <hr className="h-px w-11/12 mx-auto my-2 bg-gray-200 border-0 dark:bg-gray-700 px-3" ></hr>
             <div className="flex flex-row justify-between align-center">
                 <div className="flex flex-row justify-around">
-                    <button onClick={handleClap}>
-                        <img src={require('../../assets/Icons/clapping.svg').default} alt="img" className=" w-12 px-3"></img>
+                    <button data-testid={`clap-${id}`} onClick={handleClap}>
+                        <img src={require('../../assets/Icons/clapping.svg').default} alt="img" className=" w-12 px-3" ></img>
                     </button>
                     <p>{clap}</p>
                 </div>
