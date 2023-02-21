@@ -1,8 +1,7 @@
-import React from "react";
-import Header from "./Components/Header/Header";
-import CardContainer from "./Components/CardContainer/CardContainer";
-import "./App.css";
-import Footer from "./Components/Footer/Footer";
+import React from 'react';
+import './App.css';
+import { CardContainer, Footer, Header } from './Components';
+
 
 function App() {
     return (

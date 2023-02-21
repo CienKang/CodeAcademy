@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Footer = ():JSX.Element => {
+const Footer = (): JSX.Element => {
 
     return (
         <div className="flex flex-row justify-start items-center bg-black h-24">
