@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-import { CardContainer, Footer, Header } from './Components';
+import { BlogPage } from './pages';
 
-
-function App() {
+function App() :JSX.Element {
     return (
         <div>
-            <Header />
-            <CardContainer />
-            <Footer />
+            <BlogPage />
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import './searchBar.css';
 
 interface PropTypes {
     setTasks: React.Dispatch<React.SetStateAction<any[]>>;

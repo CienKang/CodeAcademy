@@ -1,0 +1,40 @@
+header {
+    height: 12vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .name-div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: 15vw;
+}
+
+.name-div h1 {
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+.name-div h2 {
+    font-size: 1.9rem;
+    font-weight: lighter;
+}
+
+.link-bar-div {
+    align-self: flex-end;
+    display: flex;
+    gap: 10vw;
+    margin-right: 15vw;
+    margin-bottom: 5px;
+}
+
+.link-bar-div span {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}

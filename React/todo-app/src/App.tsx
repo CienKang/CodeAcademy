@@ -1,13 +1,16 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { TodoAppPage } from './pages';
+import { LoginRegisterPage, TodoAppPage } from './pages';
 
 function App() {
-
     return (
-        <div className='todo-app-page'>
-            <TodoAppPage />
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/login' element={<LoginRegisterPage />} />
+                <Route path='/app' element={<TodoAppPage />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 

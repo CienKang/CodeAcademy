@@ -1,21 +1,20 @@
 import React from 'react';
 
-
+import './Header.css';
 const Header = (): JSX.Element => {
     return (
-        <div>
-            <div className="flex flex-col bg-black justify-center">
-                <h1 className="text-white text-lg ml-32">The Artifact</h1>
-                <p className="italic text-white text-sm ml-32">Culture & Art Blog</p>
+        <header>
+            <div className="name-div outer-margin-left-15">
+                <h2>The Artifact</h2>
+                <h1><i>Culture & Art Blog</i></h1>
             </div>
-            <div className="bg-black">
-                <div className="flex flex-row items-center justify-end mr-20 space-x-10">
-                    <a href="" className="italic text-sm text-white">Blog</a>
-                    <a href="" className="italic text-sm text-white">About us</a>
-                    <a href="" className="italic text-sm text-white">Contact</a>
-                </div>
+
+            <div className="link-bar-div">
+                <span>Blog</span>
+                <span>About</span>
+                <span>Contact</span>
             </div>
-        </div>
+        </header>
     );
 };
 

@@ -7,8 +7,7 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier"
+        "plugin:@typescript-eslint/recommended"
     ],
     "overrides": [],
     "parser": "@typescript-eslint/parser",
@@ -18,12 +17,21 @@
     },
     "plugins": [
         "react",
-        "react-hooks",
         "@typescript-eslint",
-        "prettier",
-        "eslint-plugin-prettier"
+        "unused-imports"
     ],
     "rules": {
+        "no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
+            }
+        ],
         "indent": [
             "error",
             4
@@ -40,10 +48,5 @@
             "error",
             "always"
         ]
-    },
-    "settings": {
-        "import/resolver": {
-            "typescript": {}
-        }
     }
 }

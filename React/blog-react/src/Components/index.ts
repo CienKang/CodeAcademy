@@ -1,5 +1,4 @@
-export { default as Header } from './Header';
+export { default as Card } from './Card';
 export { default as Footer } from './Footer';
-export { default as CardContainer } from './CardContainer';
-export { default as CardComponent } from './CardComponent';
-
+export { default as Header } from './Header';
+export { default as Main } from './Main';

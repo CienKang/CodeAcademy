@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogPage should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class=""
+  >
+    <header>
+      <div
+        class="name-div outer-margin-left-15"
+      >
+        <h2>
+          The Artifact
+        </h2>
+        <h1>
+          <i>
+            Culture & Art Blog
+          </i>
+        </h1>
+      </div>
+      <div
+        class="link-bar-div"
+      >
+        <span>
+          Blog
+        </span>
+        <span>
+          About
+        </span>
+        <span>
+          Contact
+        </span>
+      </div>
+    </header>
+    <main>
+      <div
+        class="cards outer-margin-left-15"
+      />
+    </main>
+    <footer>
+      <p
+        class="outer-margin-left-15"
+      >
+        ©artifact.com 2019
+      </p>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

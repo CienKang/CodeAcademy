@@ -1,0 +1,92 @@
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 4.8vw;
+    row-gap: 3vh;
+    margin-bottom: 6vh;
+}
+
+.card {
+    border: 2px rgba(128, 128, 128, 0.531) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20vw;
+    flex-wrap: column wrap;
+    gap: 1vh;
+    height: 70vh;
+}
+
+.card img {
+    height: 50%;
+}
+
+.padding-10 {
+    padding: 0 10px 0 10px;
+}
+
+.date-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: lightslategray;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.card h2 {
+    font-size: 2.2rem;
+    /* font-weight: lighter; */
+    color: rgb(44, 44, 44);
+    font-weight: 500;
+}
+
+.card p {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: rgb(94, 108, 122);
+}
+
+.break-line {
+    border: 1px rgba(128, 128, 128, 0.531) solid;
+    width: 90%;
+    align-self: center;
+}
+
+.card .comment-like {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    margin-bottom: 1vh;
+}
+
+.comments span {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: rgb(94, 108, 122);
+}
+
+.comments img {
+    height: 36px;
+    width: 36px;
+}
+
+.comment-like img {
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+}
+
+.comment-like img:hover{
+    transform: scale(1.2);
+}

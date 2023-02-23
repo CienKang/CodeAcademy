@@ -1,13 +1,12 @@
 import React from 'react';
 
-const Footer = (): JSX.Element => {
-
+import './Footer.css';
+const Footer = () :JSX.Element => {
     return (
-        <div className="flex flex-row justify-start items-center bg-black h-24">
-            <p className="ml-32 text-white">@artifact 2019</p>
-        </div>
+        <footer>
+            <p className="outer-margin-left-15">©artifact.com 2019</p>
+        </footer>
     );
-
 };
 
 export default Footer;

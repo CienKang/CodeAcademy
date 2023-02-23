@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import './List.css';
 
 interface PropTypes {
     setTasks: React.Dispatch<React.SetStateAction<any[]>>;
@@ -13,10 +14,11 @@ export const List = (props: PropTypes): JSX.Element => {
     };
 
     return (
-        <div className="todo-container">
+        <div className="list-container">
             {props.tasks.map((item, idx) => {
                 return (
-                    <div key={idx}>
+                    <div className="lists" key={idx}>
+                        <h3>{}</h3>
                         <h1>{item}</h1>
                         <button onClick={() => deleteHandler(item)} data-testid={idx} > Delete </button>
                     </div>
