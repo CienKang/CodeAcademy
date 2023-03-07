@@ -39,4 +39,5 @@ services:
     environment:
       NUMBER_OF_SALTS_ROUNDS: 10
       JWT_SECRET_KEY: secret-key
+      REDIS_HOST: docker.for.mac.localhost
       NODE_ENV: docker

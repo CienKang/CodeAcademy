@@ -12,5 +12,5 @@ app.use(express.json());
 app.use(addNewUserRoutes);
 app.use(loginUserRoutes);
 app.use(tokenValidationRoutes);
-
+console.log(process.env.REDIS_HOST);
 app.listen(PORT,process.env.HOST, () => console.log(`Server is listening on port ${PORT}`));
